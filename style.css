@@ -1,0 +1,260 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+}
+/* header */
+.header {
+  height: 150px;
+  background-image: url("./images/bg-header-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.logo {
+  max-width: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 50px);
+}
+/* main */
+main {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* section clip */
+.clip {
+  text-align: center;
+  height: auto;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+.heading {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+}
+.description {
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  max-width: 200px;
+  height: 50px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  border: none;
+  margin-right: 0.5rem;
+  color: white;
+}
+.ios {
+  background-color: hsl(171, 66%, 44%);
+}
+.mac {
+  background-color: hsl(233, 100%, 69%);
+}
+.ios:hover {
+  cursor: pointer;
+  background-color: hsl(171, 74%, 48%);
+}
+.mac:hover {
+  cursor: pointer;
+  background-color:  hsl(233, 95%, 62%);
+}
+.setcolor {
+ color: hsl(201, 11%, 66%);
+}
+/* section memory */
+.memory {
+  padding-top: 0.5rem;
+  height: 700px;
+}
+.head,
+.description {
+  text-align: center;
+}
+.head {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.memory .head,
+.memory .description {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+}
+.desktop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+}
+.desktopview {
+  max-width: 752px;
+  width: 100%;
+}
+.content {
+  padding: 50px 100px 100px 0;
+}
+.contentitem + .contentitem {
+  margin-top: 2.5rem;
+}
+/* section clipboard */
+.clipboard {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+.clipboard .head, .clipboard .description{
+  max-width: 660px;
+  margin: 0 auto;
+}
+.devices-img {
+  margin-top: 4rem;
+  max-width: 905px;
+  width: 100%;
+}
+/* section charge */
+.charge {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  gap:40.8px;
+}
+.item1 img{
+  height:32px;
+}
+.notes {
+  margin: 1.8rem 0;
+}
+/* section company */
+.company {
+  /* height: 180px; */
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 90px;
+  justify-items: center;
+}
+/* section devices */
+.devices {
+  padding: 1rem 0;
+  height: auto;
+  text-align: center;
+  max-width: 660px;
+}
+/* footer */
+.footer {
+  background-color: hsl(201deg 11% 66% / 16%);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+.f-logo {
+  max-width: 50px;
+  width: 100%;
+}
+.list-items {
+  list-style: none;
+}
+.list-items + .list-items {
+  margin-top: 15px;
+}
+.links {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+}
+.list4 {
+  align-self: center;
+}
+.list-items-img + .list-items-img {
+  margin-left: 10px;
+}
+.list-items-img {
+  display: inline-block;
+}
+.list-items .links:hover {
+  color: hsl(171, 66%, 44%);
+}
+.icon-image:hover {
+  cursor: pointer;
+  filter: invert(65%) sepia(50%) saturate(586%) hue-rotate(122deg)
+    brightness(85%) contrast(91%);
+}
+@media screen and (max-width: 1024px) {
+  .memory {
+    height: auto;
+  }
+  .content {
+    padding: 50px 100px 50px 0;
+  }
+  .company{
+    gap:40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    max-width: 768px;
+  }
+  .header {
+    background-image: url("./images/bg-header-mobile.png");
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mac {
+    margin-top: 1rem;
+  }
+  .desktop {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    padding: 20px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .row {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  .company {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .list-items + .list-items {
+    margin-top: 0;
+  }
+  .footer ul {
+    margin-bottom: 10px;
+  }
+  .footer ul:last-child {
+    margin-top: 2rem;
+  }
+}
